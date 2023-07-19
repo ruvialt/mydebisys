@@ -1,0 +1,21 @@
+#
+# Additional run commands
+#
+
+# Aliases
+## Apps
+alias auda=audacious
+alias bright=brightnessctl
+alias ebview='ebook-viewer --detach %f'
+alias feh='feh -B black -g 800x800 --scale-down --start-at'
+alias lowriter='libreoffice --writer'
+alias qpdf=qpdfview
+alias termdown='termdown -a -f digital'
+
+# The last rc file
+touch "$HOME/.lastrc"
+source "$HOME/.lastrc"
+
+#
+# ~/.addrc
+#

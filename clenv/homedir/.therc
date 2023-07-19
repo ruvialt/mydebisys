@@ -1,0 +1,87 @@
+#
+# *The* rc file
+#   - usable in both Bash and Zsh
+#
+
+# Set default umask value
+umask 0022
+
+# Ensure existence of "$HOME/bin"
+[[ ! -d "$HOME/bin" ]] && mkdir "$HOME/bin"
+
+# Variables
+## PATH additions
+PATH="$PATH:$HOME/.local/bin" 
+PATH="$PATH:$HOME/bin"
+export PATH
+
+## Misc
+if which nvim &> /dev/null; then EDITOR=nvim; else EDITOR=vim; fi
+TERM=xterm-256color
+export EDITOR TERM
+
+# Functions
+vcd () {        # verbose cd
+    if [[ -z $1 ]]; then dir="$HOME"
+    else dir="$1"; fi
+
+    if cd "$dir" > /dev/null; then pwd
+    else return 1; fi
+
+    local listing="$(ls -C --width="$(tput cols)" --color=always)"
+    local ls_count="$(printf '%s\n' "$listing" | wc -l)"
+
+    if (( ls_count > 5 )); then
+        printf '%s' "$listing" | head -n5
+        printf '...\n'
+    else
+        printf '%s\n' "$listing"
+    fi
+}
+
+bak () {
+    for arg in "$@"; do
+        local name="$(dirname "$arg")/$(basename "$arg")"
+        cp -r "$name" "${name}.bak"
+    done
+}
+
+calc () { python -c "print($1)"; }
+
+psln () {                       # Preferred symbolic linking
+    [[ -z $1 ]] || [[ -z $2 ]] \
+        && printf "Usage:\$ psln [target] [link_name]\n" \
+        && exit 1
+
+    [[ ! -e $1 ]] \
+        && printf "'%s' does not exist.\n" "$1" \
+        && exit 1
+
+    ln -s "$(readlink -fn "$1")" "$2"
+}
+
+# Aliases
+## ls
+alias ls='ls --color=auto'
+alias ll='ls -l --color=auto'
+alias la='ls -A --color=auto'
+alias lla='ls -lA --color=auto'
+
+## cd
+alias cd=vcd
+alias cdp='cd ..'
+alias cdpp='cd ../..'
+
+## Misc
+alias cp='cp -i'
+alias less='less -R +1G'
+alias py=python
+alias sedit=sudoedit
+alias view='vim -M'
+
+# Additional run commands
+source "$HOME/.addrc"
+
+#
+# ~/.therc
+#

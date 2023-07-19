@@ -1,0 +1,14 @@
+To install packages from a package list file, as in, a file containing package
+name(s) delimited by newlines:
+
+    For packages from the official repositories:
+
+        $ sudo xargs -a <pkg_list_file> apt install
+
+    For packages from Flathub:
+
+        $ sudo xargs -a <pkg_list_file> flatpak install flathub
+
+    For packages from PyPI:
+
+        $ xargs -a <pkg_list_file> pipx install

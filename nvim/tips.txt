@@ -1,0 +1,2 @@
+'gqq' wraps an entire line.
+'gqip' tries to wrap an entire paragraph to the best of its abilities.

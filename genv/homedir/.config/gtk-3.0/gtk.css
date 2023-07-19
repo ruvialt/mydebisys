@@ -1,0 +1,8 @@
+.xfce4-panel button {
+    font-weight: 500;
+}
+
+VteTerminal, vte-terminal {
+    padding-left: 4px; padding-right: 6px;
+	padding-top: 2px; padding-bottom: 10px;
+}

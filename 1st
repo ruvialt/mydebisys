@@ -1,0 +1,26 @@
+# First things first
+## Source this file before executing any other script from this directory:
+## $ source ./1st
+
+if dpkg -s sudo &> /dev/null; then
+    sudo -v
+
+    printf 'Set root password.\n'
+    sudo passwd root
+
+    sudo apt update
+    sudo apt upgrade curl git policykit-1 rsync
+    sudo apt purge xdg-user-dirs
+else
+    printf 'Enter root password.\n'
+    su - -c "
+
+        apt update
+        apt upgrade curl git policykit-1 rsync sudo
+        apt purge xdg-user-dirs
+
+        usermod -aG sudo '$USER'
+    "
+
+    printf 'Relog for changes to take effect.\n'
+fi
