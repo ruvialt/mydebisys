@@ -11,8 +11,7 @@ sudo apt upgrade xorg xfce4 \
     xfce4-power-manager xfce4-notifyd xfce4-screenshooter \
     thunar-archive-plugin thunar-media-tags-plugin \
     network-manager-gnome \
-    papirus-icon-theme adwaita-icon-theme \
-    fonts-noto-core fonts-dejavu-core
+    papirus-icon-theme adwaita-icon-theme
 
 sudo apt purge lightdm lightdm-gtk-greeter xdg-user-dirs
 
