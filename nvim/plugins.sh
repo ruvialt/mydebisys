@@ -21,3 +21,6 @@ done
 
 sudo apt update
 sudo apt upgrade gcc g++
+
+printf \
+    "Run 'nvim' to install the wanted language parsers for nvim-treesitter.\n"

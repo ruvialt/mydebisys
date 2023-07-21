@@ -23,6 +23,8 @@ printf '\n%s\n' 'Apt::AutoRemove::SuggestsImportant "false" ;' |
     sudo tee -a /etc/apt/apt.conf.d/01autoremove &> /dev/null
 
 ## Disable touchscreen (X.Org)
+! dpkg -s xorg &> /dev/null && exit
+
 mapfile -t files <<< \
     "$(grep -rlw 'touchscreen catchall' /usr/share/X11/xorg.conf.d)"
 

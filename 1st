@@ -20,7 +20,7 @@ else
         apt purge xdg-user-dirs
 
         usermod -aG sudo '$USER'
+        printf \"Added working user '%s' to group '%s'.\n\" '$USER' 'sudo'
+        printf 'Relog for group membership change to take effect.\n'
     "
-
-    printf 'Relog for changes to take effect.\n'
 fi
