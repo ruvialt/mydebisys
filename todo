@@ -1,0 +1,5 @@
+./scrs/setup/
+             kvm.sh
+             netw_mgr.sh
+             opens.sh
+             preseed_srv/*

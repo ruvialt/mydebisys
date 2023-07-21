@@ -12,9 +12,10 @@ LIBVIRT_DEFAULT_URI='qemu:///system'
 export LIBVIRT_DEFAULT_URI
 EOF
 
-sudo virsh net-start default
-sudo virsh net-autostart default
+LIBVIRT_DEFAULT_URI='qemu:///system'
+export LIBVIRT_DEFAULT_URI
 
 sudo usermod -aG libvirt "$USER"
-printf "Added working user '%s' to group '%s'.\n" "$USER" 'libvirt'
-printf 'Relog for group membership change to take effect.\n'
+
+virsh net-start default
+virsh net-autostart default
