@@ -75,7 +75,7 @@ alias cdpp='cd ../..'
 ## Misc
 alias cp='cp -i'
 alias less='less -R +1G'
-alias py=python
+alias py=python3
 alias sedit=sudoedit
 alias view='vim -M'
 

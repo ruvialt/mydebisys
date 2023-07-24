@@ -1,0 +1,2 @@
+https://www.postfix.org/BASIC_CONFIGURATION_README.html
+https://www.postfix.org/STANDARD_CONFIGURATION_README.html

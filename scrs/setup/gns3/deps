@@ -1,0 +1,12 @@
+qemu-utils
+qemu-system-x86
+qemu-system-gui
+libvirt-clients
+libvirt-daemon-system
+virtinst
+wireshark
+xtightvncviewer
+ca-certificates
+curl
+gnupg
+software-properties-common

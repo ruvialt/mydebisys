@@ -11,7 +11,6 @@ sudo tar xzvf /tmp/nvim.tgz -C /opt
 sudo ln -sf /opt/nvim-linux64/bin/nvim /usr/local/bin/nvim
 
 sudo apt update
-sudo apt upgrade xclip
 
 rm -rf "$HOME/.config/nvim"
 mkdir -p "$HOME/.config/nvim/plugin"
