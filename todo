@@ -1,5 +1,6 @@
 ./scrs/setup/
-             kvm.sh
+             kql.sh
              netw_mgr.sh
              opens.sh
-             preseed_srv/*
+             preseed_srv
+             gns3

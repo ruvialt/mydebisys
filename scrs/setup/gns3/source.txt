@@ -1,3 +1,0 @@
-https://docs.gns3.com/docs/getting-started/installation/linux/
-https://pypi.org/project/gns3-server/
-https://pypi.org/project/gns3-gui/

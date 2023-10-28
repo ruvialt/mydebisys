@@ -1,5 +1,5 @@
 favorites=xfce4-web-browser.desktop,xfce4-mail-reader.desktop,xfce4-file-manager.desktop,xfce4-terminal-emulator.desktop
-recent=firefox-esr.desktop,thunar.desktop,xfce4-notifyd-config.desktop,xfce4-terminal-emulator.desktop,panel-preferences.desktop
+recent=firefox-esr.desktop,org.keepassxc.KeePassXC.desktop,audacity.desktop,qpdfview.desktop,virt-manager.desktop,com.obsproject.Studio.desktop,thunar.desktop,xfce4-terminal-emulator.desktop,libreoffice-writer.desktop,com.snes9x.Snes9x.desktop
 button-icon=org.xfce.panel.whiskermenu
 button-single-row=false
 show-button-title=false

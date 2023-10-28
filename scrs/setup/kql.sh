@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-# KVM
+# KVM/QEMU/libvirt
 # https://wiki.debian.org/KVM
 
 sudo apt update

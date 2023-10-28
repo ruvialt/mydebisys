@@ -1,0 +1,3 @@
+https://github.com/GNS3/gns3-server
+https://github.com/GNS3/gns3-gui
+https://docs.gns3.com/docs/getting-started/installation/linux

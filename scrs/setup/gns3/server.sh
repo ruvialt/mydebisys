@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+# https://github.com/GNS3/gns3-server
+
 diroxs="$(dirname "$(readlink -fn "$0")")"
 
 sudo apt update

@@ -1,4 +1,0 @@
-Server OS: Debian
-Mail server software: Postfix
-VPS provider: DigitalOcean
-SSL/TLS provider: Let's Encrypt
